@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 333
+  Height = 600
+  Top = 121
+  Width = 800
+  BorderStyle = bsNone
+  Caption = 'Fluent Design'
+  ClientHeight = 600
+  ClientWidth = 800
+  Color = clWhite
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  LCLVersion = '1.8.4.0'
+  object BGRAVirtualScreen2: TBGRAVirtualScreen
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 800
+    OnRedraw = BGRAVirtualScreen2Redraw
+    Align = alClient
+    Alignment = taLeftJustify
+    Caption = 'BGRAVirtualScreen2'
+    ClientHeight = 600
+    ClientWidth = 800
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    OnMouseDown = FormMouseDown
+    object BGRAVirtualScreen1: TBGRAVirtualScreen
+      Left = 0
+      Height = 600
+      Top = 0
+      Width = 320
+      OnRedraw = BGRAVirtualScreen1Redraw
+      Align = alLeft
+      Alignment = taLeftJustify
+      ClientHeight = 600
+      ClientWidth = 320
+      Color = clWhite
+      ParentColor = False
+      TabOrder = 0
+      OnMouseDown = FormMouseDown
+      object Label1: TLabel
+        Left = 16
+        Height = 20
+        Top = 8
+        Width = 90
+        Caption = 'Fluent Design'
+        Font.Height = 20
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object Label2: TLabel
+      Left = 344
+      Height = 40
+      Top = 32
+      Width = 260
+      Caption = 'About Fluent Design'
+      Font.Height = 40
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 344
+      Height = 30
+      Top = 88
+      Width = 243
+      Caption = 'Made for Lazarus by Lainz'
+      Font.Height = 30
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 344
+      Height = 40
+      Top = 136
+      Width = 283
+      Caption = 'Move the window around to see the effect.'#13#10'Thanks for watching!'
+      Font.Height = 20
+      ParentColor = False
+      ParentFont = False
+    end
+    object Button1: TButton
+      Left = 344
+      Height = 25
+      Top = 192
+      Width = 75
+      Caption = 'Close'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+end
