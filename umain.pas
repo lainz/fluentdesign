@@ -50,7 +50,7 @@ implementation
 
 procedure TForm1.BGRAVirtualScreen1Redraw(Sender: TObject; Bitmap: TBGRABitmap);
 begin
-  bitmap.PutImage(-Left - BLURSIZE, -Top - BLURSIZE, wallpaper, dmSet);
+  bitmap.PutImage(-Left, -Top, wallpaper, dmSet);
   Bitmap.Rectangle(0, 0, Bitmap.Width + 1, Bitmap.Height, BGRABlack, dmSet);
 end;
 
@@ -77,7 +77,7 @@ begin
     if FileExists(wall) then
     begin
       wallpaper.LoadFromFile(wall);
-      BGRAReplace(wallpaper, wallpaper.FilterBlurRadial(BLURSIZE, BLURSIZE, rbFast));
+      BGRAReplace(wallpaper, wallpaper.FilterBlurRadial(BLURSIZE, BLURSIZE, rbBox));
       wallpaper.Rectangle(0, 0, wallpaper.Width, wallpaper.Height,
         BGRA(255, 255, 255, ALPHAVALUE), BGRA(255, 255, 255, ALPHAVALUE), dmDrawWithTransparency);
     end;
